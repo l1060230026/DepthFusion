@@ -1,41 +1,32 @@
-# Depth Fusion with Consistency Check
+# Depth Fusion with Consistency Check for COLMAP
 
 
 
-![intro](imgs/teaser.png)
+![intro](images/teaser.png)
 
 ## Requirements
 
-* python 3.6 (Anaconda)
+* python 3.8 (Anaconda)
 * ``pip install -r requirements.txt``
 
 
 ## Consistency Check
 
-![check](imgs/check.png)
+![check](images/check.png)
 
 
 ## Usage
-* In ``run.sh``, set ``root_path`` to the top directory, the organization is compatible with the outputs of [UCSNet](https://github.com/touristCheng/UCSNet). If you want to process your custom data, please modify the ``load_data`` function 
+* In ``run.sh``, set ``root_path`` to the top directory, the organization is compatible with the outputs of [COLMAP](https://https://github.com/colmap/colmap). If you want to process your custom data, please modify the ``load_data`` function 
 * Adjust ``prob_thresh``, ``dist_thresh`` and ``num_consist`` accordingly
 * ``bash run.sh``
 
 
 
 
-## Citing
+## Explain
 
-This repository is a part of [UCSNet](https://github.com/touristCheng/UCSNet), the code will be available after the paper be accepted. If you find this project useful for your research, please cite: 
+This repository is modified from [DepthFusion](https://github.com/touristCheng/DepthFusion) and [COLMAP](https://https://github.com/colmap/colmap). Cause [COLMAP](https://https://github.com/colmap/colmap) doesn't provide a convenient way to export image sequence number corresponding to dense point cloud, I modified some codes on [DepthFusion](https://github.com/touristCheng/DepthFusion) to realize this function. Besides, I have made some optimizations to accelerate fusion and reduce the occupation of HD photos on video memory
 
-```
-@inproceedings{cheng2020deep,
-  title={Deep stereo using adaptive thin volume representation with uncertainty awareness},
-  author={Cheng, Shuo and Xu, Zexiang and Zhu, Shilin and Li, Zhuwen and Li, Li Erran and Ramamoorthi, Ravi and Su, Hao},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={2524--2534},
-  year={2020}
-}
-```
 
 
 
